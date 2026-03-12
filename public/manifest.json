@@ -1,0 +1,26 @@
+{
+  "name": "LamarYuk - Job Tracker",
+  "short_name": "LamarYuk",
+  "description": "Catat dan pantau perjalanan lamaran kerjamu dengan manis",
+  "theme_color": "#f9a8d4",
+  "background_color": "#fffbf5",
+  "display": "standalone",
+  "orientation": "portrait",
+  "start_url": "/",
+  "scope": "/",
+  "lang": "id",
+  "categories": ["productivity", "utilities"],
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "shortcuts": [
+    {
+      "name": "Tambah Lamaran",
+      "short_name": "Tambah",
+      "description": "Tambah lamaran baru",
+      "url": "/add",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

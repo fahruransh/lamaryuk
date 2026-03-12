@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { -webkit-tap-highlight-color: transparent; }
+
+  html, body {
+    @apply font-sans bg-[#fffbf5] text-gray-800;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overscroll-behavior-y: none;
+  }
+
+  #root {
+    @apply min-h-screen flex flex-col;
+    max-width: 430px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { @apply bg-primary-200 rounded-full; }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-400 to-primary-500
+           text-white font-bold py-3 px-6 rounded-2xl
+           shadow-soft active:scale-95 transition-all duration-200
+           hover:shadow-glow disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply bg-primary-50 text-primary-600 font-semibold py-3 px-6
+           rounded-2xl border border-primary-200 active:scale-95
+           transition-all duration-200 disabled:opacity-50;
+  }
+
+  .btn-ghost {
+    @apply text-primary-500 font-semibold py-2 px-4 rounded-xl
+           active:bg-primary-50 transition-all duration-200;
+  }
+
+  .card {
+    @apply bg-white rounded-3xl shadow-card p-4 border border-primary-50;
+  }
+
+  .input-field {
+    @apply w-full bg-primary-50 border border-primary-100 rounded-2xl
+           px-4 py-3 text-gray-700 font-medium placeholder-gray-400
+           focus:outline-none focus:ring-2 focus:ring-primary-300
+           focus:border-primary-300 transition-all duration-200;
+  }
+
+  .section-title {
+    @apply text-lg font-bold text-gray-800;
+  }
+
+  .page-container {
+    @apply px-4 pb-28 pt-4 space-y-4 animate-fade-in;
+  }
+}
+
+@layer utilities {
+  .safe-bottom { padding-bottom: env(safe-area-inset-bottom, 1rem); }
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-500 to-peach-400 bg-clip-text text-transparent;
+  }
+  .bg-cute {
+    background: linear-gradient(135deg, #fdf2f8 0%, #fff8f1 50%, #f5f3ff 100%);
+  }
+}
